@@ -17,6 +17,11 @@ const sr = ScrollReveal({
   reset: true,
 });
 
+function setFavicon() {
+  var link = $('link[type="image/x-icon"]').remove().attr("href");
+  $('<link href="'+ link +'" rel="icon" type="image/x-icon" />').appendTo('head');
+}
+
 sr.reveal('.home-text', { delay: 200, origin: 'top' });
 sr.reveal('.home-img', { delay: 400, origin: 'top' });
 sr.reveal('.about, .cta, .resume, .contact, .footer', { delay: 200, origin: 'top' });
